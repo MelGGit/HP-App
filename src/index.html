@@ -1,4 +1,4 @@
-<!DOCTYPE html>AppHee
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,34 +9,6 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <section class="card">
-      <div class="header-name">
-        <h2>${name}</h2>
-        House: ${house}, Species: ${species}
-      </div>
-      <div class="header-image">
-        <img
-          class="card-image"
-          width="150px"
-          style="profile-picture"
-          src="assets/favicon.png"
-          alt=""
-        />
-      </div>
-      <p>
-        ${character.name} ${character.alive ? '' : ' (deceased)'} is a
-        ${character.species} of House ${character.house}, portrayed by
-        ${character.actor}. He/she was born on ${dateOfBirth} is currently/was a
-        student/staff member of Hogwarts. His/her patronus is ${patronus}.
-      </p>
-      <div class="wand-info">
-        <ul class="wand-list">
-          ${name}'s Wand
-          <li>Type of Wood: ${wand.wood}</li>
-          <li>Type of Core: ${wand.core}</li>
-          <li>Length: ${wand.length}</li>
-        </ul>
-      </div>
-    </section>
+    <div data-js="characters"></div>
   </body>
 </html>
