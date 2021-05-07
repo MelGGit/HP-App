@@ -1,0 +1,13 @@
+header {
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.header__buttons {
+  background: goldenrod;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

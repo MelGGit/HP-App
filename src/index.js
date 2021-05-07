@@ -1,11 +1,11 @@
-import AppHeader from './components/AppHeader'
-
-document.body.append(AppHeader('JavaScript App Template'))
+import setupHeader from './components/header/header'
 
 const container = document.querySelector('[data-js="characters"]')
 const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
 let characters
+
+setupHeader()
 
 getAllCharacters().then(data => {
   characters = data
