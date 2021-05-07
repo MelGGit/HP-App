@@ -1,11 +1,11 @@
 const container = document.querySelector('[data-js="characters"]')
-const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
+// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
 let characters
 
 getAllCharacters().then(data => {
   characters = data
-  renderCharacters()
+  //  renderCharacters()
 })
 
 function getAllCharacters() {
@@ -32,7 +32,7 @@ renderCharacter()
 //   }, {})
 // }
 
-function rengstderCharacter(character) {
+function renderCharacter(character) {
   //  const { name, image } = character
 
   const el = document.createElement('div')
@@ -67,3 +67,4 @@ function rengstderCharacter(character) {
   `
   container.append(el)
 }
+console.log(characters)
