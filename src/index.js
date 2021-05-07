@@ -1,11 +1,7 @@
 import setupHeader from './components/header/setupHeader'
-import renderCharacter from './renderCharacter.js'
 import renderCharacters from './renderCharacters.js'
 
 export const container = document.querySelector('[data-js="characters"]')
-
-// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
-
 export let characters
 
 getAllCharacters().then(data => {
@@ -17,8 +13,6 @@ function getAllCharacters() {
   const url = 'https://hp-api.herokuapp.com/api/characters'
   return fetch(url).then(response => response.json())
 }
-
-renderCharacter()
 
 setupHeader()
 
