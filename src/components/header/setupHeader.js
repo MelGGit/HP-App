@@ -1,5 +1,6 @@
 export default function setupHeader() {
   const headerEl = document.createElement('header')
+
   headerEl.innerHTML = `
     <nav class="header__filter" data-js="filter">
       <button class="header__buttons">All</button>

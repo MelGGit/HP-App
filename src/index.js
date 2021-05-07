@@ -1,11 +1,8 @@
-import setupHeader from './components/header/header'
+import setupHeader from './components/header/setupHeader'
 
 const container = document.querySelector('[data-js="characters"]')
-const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
 let characters
-
-setupHeader()
 
 getAllCharacters().then(data => {
   characters = data
@@ -27,12 +24,14 @@ function renderCharacters(selectedHouse = 'All') {
     .forEach(renderCharacter)
 }
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedHouse = button.innerText
-    renderCharacters(selectedHouse)
-  })
-})
+setupHeader()
+
+// filterButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     const selectedHouse = button.innerText
+//     renderCharacters(selectedHouse)
+//   })
+// })
 
 // function countByHouse(characters) {
 //   return characters.reduce((acc, cur) => {
