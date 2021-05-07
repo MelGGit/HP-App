@@ -1,13 +1,13 @@
 header {
-  height: 8rem;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  top: 0;
-  position: fixed;
-  z-index: 10;
   background: white;
+  grid-area: 'header';
+  background-image: url(../../assets/harrypotter.jpg);
+  background-position: center;
+  border: 1px solid black;
 }
 
 .header__buttons {

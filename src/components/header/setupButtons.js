@@ -1,10 +1,12 @@
-// function setupButtons() {
-//   const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
+import renderCharacters from '../../renderCharacters'
 
-//   filterButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-//       const selectedHouse = button.innerText
-//       renderCharacters(selectedHouse)
-//     })
-//   })
-// }
+export default function setupButtons() {
+  const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedHouse = button.innerText
+      renderCharacters(selectedHouse)
+    })
+  })
+}

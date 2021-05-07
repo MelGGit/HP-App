@@ -1,7 +1,8 @@
 import renderCharacter from './renderCharacter'
-import { characters, container } from './index.js'
+import { characters } from './index.js'
 
 export default function renderCharacters(selectedHouse = 'All') {
+  const container = document.querySelector('[data-js="characters"]')
   container.innerHTML = ''
 
   characters

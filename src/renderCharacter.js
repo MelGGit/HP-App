@@ -1,6 +1,5 @@
-import container from './index.js'
-
 export default function renderCharacter(character) {
+  const container = document.querySelector('[data-js="characters"]')
   const { name, image } = character
 
   const el = document.createElement('div')

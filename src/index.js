@@ -1,7 +1,7 @@
+import setupButtons from './components/header/setupButtons'
 import setupHeader from './components/header/setupHeader'
 import renderCharacters from './renderCharacters.js'
 
-export const container = document.querySelector('[data-js="characters"]')
 export let characters
 
 getAllCharacters().then(data => {
@@ -15,6 +15,7 @@ function getAllCharacters() {
 }
 
 setupHeader()
+setupButtons()
 
 // filterButtons.forEach(button => {
 //   button.addEventListener('click', () => {
