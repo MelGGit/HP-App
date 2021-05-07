@@ -1,0 +1,48 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card {
+  /* max-width: 400px; */
+  border: 1px #333 solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.header-name {
+  height: 150px;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.235);
+}
+
+.card-image {
+  border-radius: 5px;
+}
+
+.wand-info {
+  width: 100%;
+  border: 1px #333 solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.wand-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

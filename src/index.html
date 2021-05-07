@@ -9,14 +9,38 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="filter" data-js="filter">
-      <button>All</button>
-      <button>Gryffindor</button>
-      <button>Slytherin</button>
-      <button>Hufflepuff</button>
-      <button>Ravenclaw</button>
-    </div>
-
-    <div data-js="characters"></div>
+    <section class="card" data-js="characters">
+      <div class="header-name">
+        <h2>${character.name}</h2>
+        House: ${character.house},<br />Species: ${character.species}
+      </div>
+      <div class="header-image">
+        <img
+          class="card-image"
+          width="150px"
+          src="${character.image.replace('http', 'https')}"
+          alt=""
+        />
+      </div>
+      <p>
+        ${character.name} ${character.alive ? '' : ' (deceased)'} ${
+        character.alive === true ? 'is' : 'was' } a ${character.species} of
+        House ${character.house}. ${character.gender === 'male' ? 'He' : 'She'}
+        was born on ${character.dateOfBirth} and ${ character.alive === true ?
+        'is' : 'was' } ${ character.hogwartsStudent === true ? 'a student' :
+        character.hogwartsStaff === true ? 'a staff member' : 'not'} at
+        Hogwarts. ${character.gender === 'male' ? 'His' : 'Her'} patronus is
+        ${character.patronus}. In the movies ${character.name} was portrayed by
+        ${character.actor}.
+      </p>
+      <div class="wand-info">
+        <ul class="wand-list">
+          ${character.name}'s Wand
+          <li>Type of Wood: ${character.wand.wood}</li>
+          <li>Type of Core: ${character.wand.core}</li>
+          <li>Length: ${character.wand.length}</li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

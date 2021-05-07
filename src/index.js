@@ -1,10 +1,7 @@
-import renderCharacter from './renderCharacter.js'
-import renderCharacters from './renderCharacters.js'
+const container = document.querySelector('[data-js="characters"]')
+const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
-export const container = document.querySelector('[data-js="characters"]')
-// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
-
-export let characters
+let characters
 
 getAllCharacters().then(data => {
   characters = data
@@ -35,16 +32,13 @@ renderCharacter()
 //   }, {})
 // }
 
-// function renderCharacter(character) {
-//   const { name, image } = character
+function renderCharacter(character) {
+  //  const { name, image } = character
 
-//   const el = document.createElement('div')
-//   el.className = 'character'
-//   el.innerHTML = `
-//     <h2 class="character__name">${name}</h2>
-//     <img
-//       class="character__image"
-//       src="${image.replace('http', 'https')}">
-//   `
-//   container.append(el)
-// }
+  const el = document.createElement('div')
+  el.className = 'character'
+  // el.innerHTML = `
+
+  // `
+  container.append(el)
+}
