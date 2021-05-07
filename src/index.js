@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 const container = document.querySelector('[data-js="characters"]')
 const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
 let characters
+=======
+import renderCharacter from './renderCharacter.js'
+import renderCharacters from './renderCharacters.js'
+
+export const container = document.querySelector('[data-js="characters"]')
+// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
+
+export let characters
+>>>>>>> main
 
 getAllCharacters().then(data => {
   characters = data
@@ -13,22 +23,14 @@ function getAllCharacters() {
   return fetch(url).then(response => response.json())
 }
 
-function renderCharacters(selectedHouse = 'All') {
-  container.innerHTML = ''
+renderCharacter()
 
-  characters
-    .filter(
-      character => character.house === selectedHouse || selectedHouse === 'All'
-    )
-    .forEach(renderCharacter)
-}
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedHouse = button.innerText
-    renderCharacters(selectedHouse)
-  })
-})
+// filterButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     const selectedHouse = button.innerText
+//     renderCharacters(selectedHouse)
+//   })
+// })
 
 // function countByHouse(characters) {
 //   return characters.reduce((acc, cur) => {
