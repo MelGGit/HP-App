@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 const container = document.querySelector('[data-js="characters"]')
 const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
 
 let characters
-=======
-import renderCharacter from './renderCharacter.js'
-import renderCharacters from './renderCharacters.js'
-
-export const container = document.querySelector('[data-js="characters"]')
-// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
-
-export let characters
->>>>>>> main
 
 getAllCharacters().then(data => {
   characters = data
@@ -42,7 +32,7 @@ renderCharacter()
 //   }, {})
 // }
 
-function renderCharacter(character) {
+function rengstderCharacter(character) {
   //  const { name, image } = character
 
   const el = document.createElement('div')
