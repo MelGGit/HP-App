@@ -1,8 +1,12 @@
 import setupHeader from './components/header/setupHeader'
+import renderCharacter from './renderCharacter.js'
+import renderCharacters from './renderCharacters.js'
 
-const container = document.querySelector('[data-js="characters"]')
+export const container = document.querySelector('[data-js="characters"]')
 
-let characters
+// const filterButtons = document.querySelectorAll('[data-js="filter"] > button')
+
+export let characters
 
 getAllCharacters().then(data => {
   characters = data
@@ -14,15 +18,7 @@ function getAllCharacters() {
   return fetch(url).then(response => response.json())
 }
 
-function renderCharacters(selectedHouse = 'All') {
-  container.innerHTML = ''
-
-  characters
-    .filter(
-      character => character.house === selectedHouse || selectedHouse === 'All'
-    )
-    .forEach(renderCharacter)
-}
+renderCharacter()
 
 setupHeader()
 
@@ -43,16 +39,16 @@ setupHeader()
 //   }, {})
 // }
 
-function renderCharacter(character) {
-  const { name, image } = character
+// function renderCharacter(character) {
+//   const { name, image } = character
 
-  const el = document.createElement('div')
-  el.className = 'character'
-  el.innerHTML = `
-    <h2 class="character__name">${name}</h2>
-    <img 
-      class="character__image" 
-      src="${image.replace('http', 'https')}">
-  `
-  container.append(el)
-}
+//   const el = document.createElement('div')
+//   el.className = 'character'
+//   el.innerHTML = `
+//     <h2 class="character__name">${name}</h2>
+//     <img
+//       class="character__image"
+//       src="${image.replace('http', 'https')}">
+//   `
+//   container.append(el)
+// }
