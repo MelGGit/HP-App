@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>AppHee
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,14 +9,21 @@
     <script defer type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="filter" data-js="filter">
-      <button>All</button>
-      <button>Gryffindor</button>
-      <button>Slytherin</button>
-      <button>Hufflepuff</button>
-      <button>Ravenclaw</button>
-    </div>
-
-    <div data-js="characters"></div>
+    <section class="card">
+      <h2>${name}</h2>
+      ${house}, ${species}
+      <img
+        src="${character.image.replace('http', 'https')}"
+        alt="Picture of ${name}"
+      />
+      <div class="wand-info">
+        <ul class="wand-list">
+          ${name}'s Wand
+          <li>Type of Wood: ${wand.wood}</li>
+          <li>Type of Core: ${wand.core}</li>
+          <li>Length: ${wand.length}</li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

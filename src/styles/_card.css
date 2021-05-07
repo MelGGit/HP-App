@@ -1,0 +1,19 @@
+.card {
+  max-width: 400px;
+  border: 1px #333 solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.wand-info {
+  width: 250px;
+  border: 1px #333 solid;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.wand-list {
+  text-decoration: none;
+  margin: 0;
+}
