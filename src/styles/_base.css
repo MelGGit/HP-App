@@ -9,6 +9,15 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
   margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 20rem 1fr;
+  grid-template-areas: 'header' 'main';
+}
+
+main {
+  grid-area: 'main';
+  overflow-y: scroll;
 }
 
 h1,
